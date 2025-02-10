@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-child',
-  standalone: false,
-  templateUrl: './child.component.html',
-  styleUrl: './child.component.css'
+  template: `
+    <p>{{ childText }}</p>
+  `,
+  styles: []
 })
 export class ChildComponent {
-
+  @Input() childText: string = '';
 }
